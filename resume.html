@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毕靖喜 — 个人简历</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --primary-light: #16213e;
+            --accent: #0f3460;
+            --accent-light: #1a508b;
+            --highlight: #e94560;
+            --highlight-soft: #ff6b6b;
+            --gold: #f0a500;
+            --text-primary: #2d3436;
+            --text-secondary: #636e72;
+            --text-light: #b2bec3;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-light: #e9ecef;
+            --border-soft: #dee2e6;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+            --shadow-xl: 0 16px 48px rgba(0,0,0,0.16);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 30%, #dfe6ed 60%, #eef1f5 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* ========== 背景装饰 ========== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -20%;
+            width: 80%;
+            height: 120%;
+            background: radial-gradient(ellipse at center, rgba(15, 52, 96, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -30%;
+            right: -15%;
+            width: 60%;
+            height: 80%;
+            background: radial-gradient(ellipse at center, rgba(233, 68, 96, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ========== 顶部导航 ========== */
+        .navbar-resume {
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0;
+            transition: var(--transition);
+        }
+        .navbar-resume .nav-link {
+            color: rgba(255,255,255,0.75) !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 1rem 1.25rem;
+            transition: var(--transition);
+            border-bottom: 2px solid transparent;
+            letter-spacing: 0.02em;
+        }
+        .navbar-resume .nav-link:hover,
+        .navbar-resume .nav-link.active {
+            color: #fff !important;
+            border-bottom-color: var(--highlight);
+            background: rgba(255,255,255,0.04);
+        }
+        .navbar-brand-resume {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #fff !important;
+            letter-spacing: 0.04em;
+            padding: 0.75rem 1.5rem;
+        }
+        .navbar-brand-resume span {
+            color: var(--highlight);
+        }
+
+        /* ========== 主容器 ========== */
+        .main-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* ========== Hero 头部 ========== */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 40%, var(--accent) 100%);
+            border-radius: var(--radius-xl);
+            padding: 3.5rem 3rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(233,68,96,0.25) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(240,165,0,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        /* 数据粒子装饰 */
+        .data-particles {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.12);
+            animation: floatUp 8s infinite;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100%) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100%) rotate(180deg); opacity: 0; }
+        }
+        .hero-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--highlight), var(--highlight-soft));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #fff;
+            box-shadow: 0 8px 32px rgba(233,68,96,0.35);
+            border: 4px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+        }
+        .hero-content { position: relative; z-index: 1; }
+        .hero-name {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.3rem;
+        }
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.75);
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+        .hero-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .hero-badge {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.18);
+            color: rgba(255,255,255,0.9);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        .hero-badge:hover {
+            background: rgba(255,255,255,0.22);
+            border-color: rgba(255,255,255,0.35);
+            transform: translateY(-2px);
+        }
+
+        /* ========== 双栏布局 ========== */
+        .resume-layout { display: flex; gap: 2rem; }
+        .resume-sidebar { width: 340px; flex-shrink: 0; }
+        .resume-main { flex: 1; min-width: 0; }
+
+        /* ========== 通用卡片 ========== */
+        .card-resume {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 1.75rem;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-resume:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .card-resume::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px;
+            height: 40px;
+            border-radius: 0 4px 4px 0;
+        }
+        .card-resume.card-accent-blue::before { background: var(--accent-light); }
+        .card-resume.card-accent-red::before { background: var(--highlight); }
+        .card-resume.card-accent-gold::before { background: var(--gold); }
+        .card-resume.card-accent-teal::before { background: #00b894; }
+        .card-resume.card-accent-purple::before { background: #6c5ce7; }
+
+        .section-icon {
+            width: 42px; height: 42px;
+            border-radius: var(--radius-sm);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        .icon-blue { background: rgba(15,52,96,0.1); color: var(--accent); }
+        .icon-red { background: rgba(233,68,96,0.1); color: var(--highlight); }
+        .icon-gold { background: rgba(240,165,0,0.1); color: var(--gold); }
+        .icon-teal { background: rgba(0,184,148,0.1); color: #00b894; }
+        .icon-purple { background: rgba(108,92,231,0.1); color: #6c5ce7; }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, var(--border-soft) 0%, var(--border-light) 50%, transparent 100%);
+            margin: 1rem 0 1.25rem;
+        }
+
+        /* ========== 个人信息列表 ========== */
+        .info-list { list-style: none; padding: 0; margin: 0; }
+        .info-list li {
+            display: flex;
+            align-items: flex-start;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+        .info-list li:last-child { border-bottom: none; }
+        .info-list li:hover { padding-left: 0.3rem; }
+        .info-list .info-icon {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-right: 0.85rem;
+        }
+        .info-list .info-label {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.15rem;
+        }
+        .info-list .info-value {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* ========== 技能进度条 ========== */
+        .skill-item { margin-bottom: 1.1rem; }
+        .skill-item:last-child { margin-bottom: 0; }
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.4rem;
+        }
+        .skill-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .skill-level {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            background: rgba(15,52,96,0.08);
+            padding: 0.15rem 0.6rem;
+            border-radius: 50px;
+        }
+        .skill-bar {
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            height: 100%;
+            border-radius: 50px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .skill-fill::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 20px; height: 100%;
+            background: rgba(255,255,255,0.3);
+            border-radius: 0 50px 50px 0;
+        }
+        .skill-fill.high { background: linear-gradient(90deg, #00b894, #00cec9); }
+        .skill-fill.mid { background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+        .skill-fill.dev { background: linear-gradient(90deg, var(--highlight), var(--highlight-soft)); }
+
+        /* ========== 标签云 ========== */
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag {
+            background: var(--bg-light);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+            cursor: default;
+        }
+        .tag:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15,52,96,0.25);
+        }
+        .tag.tag-highlight {
+            background: rgba(233,68,96,0.08);
+            color: var(--highlight);
+            border-color: rgba(233,68,96,0.2);
+        }
+        .tag.tag-highlight:hover {
+            background: var(--highlight);
+            color: #fff;
+            border-color: var(--highlight);
+        }
+
+        /* ========== 时间线 ========== */
+        .timeline { position: relative; padding-left: 2rem; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0.3rem; bottom: 0.3rem;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-light), rgba(15,52,96,0.15), var(--accent-light));
+            border-radius: 1px;
+        }
+        .timeline-item { position: relative; margin-bottom: 1.5rem; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.45rem;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px rgba(15,52,96,0.15);
+            transition: var(--transition);
+        }
+        .timeline-item:hover::before {
+            background: var(--highlight);
+            box-shadow: 0 0 0 6px rgba(233,68,96,0.2);
+            transform: scale(1.3);
+        }
+        .timeline-period {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.2rem;
+        }
+        .timeline-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+        .timeline-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .timeline-desc ul {
+            padding-left: 1.2rem;
+            margin: 0.4rem 0 0;
+        }
+        .timeline-desc ul li { margin-bottom: 0.2rem; }
+
+        /* ========== 项目卡片 ========== */
+        .project-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .project-card {
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+            cursor: default;
+        }
+        .project-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+            border-color: var(--accent-light);
+        }
+        .project-card .project-icon {
+            font-size: 1.6rem;
+            margin-bottom: 0.6rem;
+        }
+        .project-card .project-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+        .project-card .project-role {
+            font-size: 0.8rem;
+            color: var(--accent-light);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .project-card .project-desc {
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* ========== 证书卡片 ========== */
+        .cert-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: var(--bg-light);
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.6rem;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+        .cert-item:hover {
+            background: #fff;
+            box-shadow: var(--shadow-sm);
+            border-color: var(--accent-light);
+        }
+        .cert-item .cert-icon {
+            font-size: 1.4rem;
+            margin-right: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        /* ========== 页脚 ========== */
+        .resume-footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-light);
+            font-size: 0.82rem;
+            border-top: 1px solid var(--border-light);
+            margin-top: 1rem;
+        }
+        .resume-footer .divider-dot {
+            display: inline-block;
+            width: 4px; height: 4px;
+            background: var(--text-light);
+            border-radius: 50%;
+            margin: 0 0.6rem;
+            vertical-align: middle;
+            opacity: 0.5;
+        }
+
+        /* ========== 打印样式 ========== */
+        @media print {
+            body {
+                background: #fff !important;
+                font-size: 12px;
+            }
+            body::before, body::after, .data-particles, .navbar-resume { display: none !important; }
+            .main-container { max-width: 100%; padding: 0; }
+            .hero-section {
+                background: var(--primary) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                border-radius: 0;
+                padding: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .resume-layout { flex-direction: column; }
+            .resume-sidebar { width: 100%; }
+            .card-resume {
+                break-inside: avoid;
+                box-shadow: none !important;
+                border: 1px solid #ddd;
+                margin-bottom: 0.5rem;
+                padding: 1rem;
+            }
+            .card-resume:hover { transform: none; }
+            .project-cards { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* ========== 响应式 ========== */
+        @media (max-width: 992px) {
+            .resume-layout { flex-direction: column; }
+            .resume-sidebar { width: 100%; }
+            .hero-section { padding: 2rem 1.5rem; }
+            .hero-name { font-size: 2rem; }
+            .hero-section .d-flex { flex-direction: column; align-items: center; text-align: center; }
+            .hero-badges { justify-content: center; }
+        }
+        @media (max-width: 768px) {
+            .main-container { padding: 1rem 0.75rem 2rem; }
+            .project-cards { grid-template-columns: 1fr; }
+            .navbar-resume .nav-link { font-size: 0.78rem; padding: 0.6rem 0.75rem; }
+            .hero-name { font-size: 1.7rem; }
+            .hero-subtitle { font-size: 0.9rem; }
+            .card-resume { padding: 1.25rem; }
+        }
+
+        /* ========== 入场动画 ========== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .animate-in {
+            animation: fadeInUp 0.7s ease forwards;
+            opacity: 0;
+        }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== 导航栏 ==================== -->
+    <nav class="navbar-resume">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand-resume" href="#">
+                <i class="bi bi-file-earmark-person"></i> <span>毕</span>靖喜 · 个人简历
+            </a>
+        </div>
+    </nav>
+
+    <!-- ==================== 主体 ==================== -->
+    <div class="main-container">
+
+        <!-- ======== Hero 头部区域 ======== -->
+        <header class="hero-section animate-in">
+            <div class="data-particles" aria-hidden="true">
+                <span class="particle" style="left:5%; animation-delay:0s;">{ data: 101 }</span>
+                <span class="particle" style="left:15%; animation-delay:1.2s;">SELECT *</span>
+                <span class="particle" style="left:25%; animation-delay:2.5s;">[0x7F]</span>
+                <span class="particle" style="left:35%; animation-delay:3.8s;">.json()</span>
+                <span class="particle" style="left:48%; animation-delay:0.6s;">import</span>
+                <span class="particle" style="left:58%; animation-delay:2.1s;">NaN</span>
+                <span class="particle" style="left:68%; animation-delay:4.2s;">df.</span>
+                <span class="particle" style="left:78%; animation-delay:1.7s;">0b10</span>
+                <span class="particle" style="left:88%; animation-delay:3.3s;">plt</span>
+                <span class="particle" style="left:92%; animation-delay:5.1s;">∑x</span>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+                <!-- 头像 -->
+                <div class="hero-avatar">毕</div>
+                <!-- 核心信息 -->
+                <div class="hero-content">
+                    <h1 class="hero-name">毕 靖 喜</h1>
+                    <p class="hero-subtitle">
+                        <i class="bi bi-mortarboard-fill me-2"></i>
+                        数据科学与大数据技术 · 本科在读
+                    </p>
+                    <div class="hero-badges">
+                        <span class="hero-badge"><i class="bi bi-geo-alt-fill me-1"></i>昆明学院</span>
+                        <span class="hero-badge"><i class="bi bi-building me-1"></i>信息工程学院</span>
+                        <span class="hero-badge"><i class="bi bi-calendar-check me-1"></i>2023 级</span>
+                        <span class="hero-badge"><i class="bi bi-laptop me-1"></i>大数据方向</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ======== 双栏内容 ======== -->
+        <div class="resume-layout">
+
+            <!-- ==================== 左侧边栏 ==================== -->
+            <aside class="resume-sidebar">
+
+                <!-- 基本信息 -->
+                <div class="card-resume card-accent-blue animate-in delay-1">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-blue"><i class="bi bi-person-badge"></i></span>
+                        <span class="section-title">基本信息</span>
+                    </div>
+                    <div class="section-divider"></div>
+                    <ul class="info-list">
+                        <li>
+                            <span class="info-icon" style="background:rgba(15,52,96,0.08); color:var(--accent);">
+                                <i class="bi bi-telephone-fill"></i>
+                            </span>
+                            <div>
+                                <div class="info-label">联系电话</div>
+                                <div class="info-value">18787825434</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="info-icon" style="background:rgba(233,68,96,0.08); color:var(--highlight);">
+                                <i class="bi bi-mortarboard-fill"></i>
+                            </span>
+                            <div>
+                                <div class="info-label">就读院校</div>
+                                <div class="info-value">昆明学院 · 信息工程学院</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="info-icon" style="background:rgba(0,184,148,0.08); color:#00b894;">
+                                <i class="bi bi-bar-chart-line-fill"></i>
+                            </span>
+                            <div>
+                                <div class="info-label">所学专业</div>
+                                <div class="info-value">数据科学与大数据技术</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="info-icon" style="background:rgba(240,165,0,0.08); color:var(--gold);">
+                                <i class="bi bi-award-fill"></i>
+                            </span>
+                            <div>
+                                <div class="info-label">在读学历</div>
+                                <div class="info-value">本科</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="info-icon" style="background:rgba(108,92,231,0.08); color:#6c5ce7;">
+                                <i class="bi bi-calendar2-plus-fill"></i>
+                            </span>
+                            <div>
+                                <div class="info-label">入学时间</div>
+                                <div class="info-value">2023 年 09 月</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="info-icon" style="background:rgba(15,52,96,0.08); color:var(--accent);">
+                                <i class="bi bi-upc-scan"></i>
+                            </span>
+                            <div>
+                                <div class="info-label">学号</div>
+                                <div class="info-value">23110941046</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 专业技能 -->
+                <div class="card-resume card-accent-red animate-in delay-2">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-red"><i class="bi bi-tools"></i></span>
+                        <span class="section-title">专业技能</span>
+                    </div>
+                    <div class="section-divider"></div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python 数据分析</span>
+                            <span class="skill-level">熟练</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill mid" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">SQL / MySQL</span>
+                            <span class="skill-level">熟练</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill mid" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Excel 高级功能</span>
+                            <span class="skill-level">精通</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill high" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">数据清洗与预处理</span>
+                            <span class="skill-level">熟练</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill mid" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">数据可视化</span>
+                            <span class="skill-level">掌握</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 68%; background: linear-gradient(90deg, #6c5ce7, #a29bfe);"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">计算机网络</span>
+                            <span class="skill-level">掌握</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 65%; background: linear-gradient(90deg, #636e72, #b2bec3);"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Office 办公套件</span>
+                            <span class="skill-level">精通</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill high" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 技术标签 -->
+                <div class="card-resume card-accent-teal animate-in delay-3">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-teal"><i class="bi bi-tags-fill"></i></span>
+                        <span class="section-title">技术标签</span>
+                    </div>
+                    <div class="section-divider"></div>
+                    <div class="tag-cloud">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag tag-highlight">MySQL</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Matplotlib</span>
+                        <span class="tag tag-highlight">Excel</span>
+                        <span class="tag">数据清洗</span>
+                        <span class="tag">数据建模</span>
+                        <span class="tag">数据可视化</span>
+                        <span class="tag">ETL</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Word</span>
+                        <span class="tag">PPT</span>
+                        <span class="tag tag-highlight">计算机网络</span>
+                        <span class="tag">统计学</span>
+                    </div>
+                </div>
+
+                <!-- 兴趣爱好 -->
+                <div class="card-resume card-accent-purple animate-in delay-4">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-purple"><i class="bi bi-heart-pulse-fill"></i></span>
+                        <span class="section-title">兴趣爱好</span>
+                    </div>
+                    <div class="section-divider"></div>
+                    <div class="d-flex flex-column gap-3">
+                        <!-- 跑步 -->
+                        <div class="d-flex align-items-start gap-3">
+                            <span style="font-size:1.8rem;">🏃</span>
+                            <div>
+                                <strong style="color:var(--text-primary);">跑步</strong>
+                                <p style="font-size:0.83rem; color:var(--text-secondary); margin:0.2rem 0 0;">
+                                    长期坚持，培养自律品质与坚韧心态
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 篮球 -->
+                        <div class="d-flex align-items-start gap-3">
+                            <span style="font-size:1.8rem;">🏀</span>
+                            <div>
+                                <strong style="color:var(--text-primary);">篮球</strong>
+                                <p style="font-size:0.83rem; color:var(--text-secondary); margin:0.2rem 0 0;">
+                                    团队协作、临场应变与集体意识
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 电竞 -->
+                        <div class="d-flex align-items-start gap-3">
+                            <span style="font-size:1.8rem;">🎮</span>
+                            <div>
+                                <strong style="color:var(--text-primary);">竞技游戏</strong>
+                                <p style="font-size:0.83rem; color:var(--text-secondary); margin:0.2rem 0 0;">
+                                    王者荣耀 · 三角洲 — 策略规划与快速决策
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ==================== 右侧主内容 ==================== -->
+            <main class="resume-main">
+
+                <!-- 专业介绍 -->
+                <section class="card-resume card-accent-blue animate-in delay-1">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-blue"><i class="bi bi-book-half"></i></span>
+                        <span class="section-title">专业介绍</span>
+                    </div>
+                    <div class="section-divider"></div>
+                    <p style="font-size:0.93rem; color:var(--text-secondary); line-height:1.8; margin:0;">
+                        数据科学与大数据技术专业聚焦<strong style="color:var(--accent);">大数据采集、清洗、分析、挖掘与可视化</strong>核心领域，
+                        融合<strong style="color:var(--accent);">计算机科学、统计学、数学建模</strong>等多学科知识。本人在校系统学习大数据领域核心课程，
+                        构建了完整的专业知识体系，熟练掌握数据处理、数据分析、数据建模等基础专业技能，
+                        致力于成为兼具<strong style="color:var(--highlight);">理论基础与实操能力</strong>的大数据技术应用型人才。
+                        在学习过程中，注重理论联系实际，主动钻研行业前沿技术，持续提升自身专业素养与技术实操水平。
+                    </p>
+                </section>
+
+                <!-- 学业学习 -->
+                <section class="card-resume card-accent-blue animate-in delay-2">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-blue"><i class="bi bi-journal-code"></i></span>
+                        <span class="section-title">学业学习</span>
+                    </div>
+                    <div class="section-divider"></div>
+
+                    <!-- 核心课程 -->
+                    <h6 style="font-weight:700; color:var(--accent); margin-bottom:0.8rem; font-size:0.9rem;">
+                        <i class="bi bi-check2-circle me-2"></i>已完成核心课程
+                    </h6>
+                    <div class="tag-cloud mb-3">
+                        <span class="tag tag-highlight">Python程序设计</span>
+                        <span class="tag tag-highlight">数据库原理与应用</span>
+                        <span class="tag">大数据基础概论</span>
+                        <span class="tag">统计学基础</span>
+                        <span class="tag tag-highlight">数据预处理技术</span>
+                        <span class="tag">计算机网络</span>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-period">2023 - 至今</div>
+                            <div class="timeline-title">系统化专业学习</div>
+                            <div class="timeline-desc">
+                                扎实掌握 <strong>Python、SQL</strong> 等编程语言，熟悉 MySQL 数据库操作、大数据数据清洗、基础数据分析等实操技能。
+                                摒弃被动学习模式，养成自主钻研、总结复盘的学习习惯。
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">持续进行中</div>
+                            <div class="timeline-title">重点方向深耕</div>
+                            <div class="timeline-desc">
+                                针对大数据建模、数据可视化等重难点知识，主动查阅行业文献、观看专业教学课程、完成课后实操项目，
+                                不断夯实理论基础，提升代码编写与数据处理的实操能力。
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">课外协作</div>
+                            <div class="timeline-title">学习小组与合作交流</div>
+                            <div class="timeline-desc">
+                                积极参与班级学习小组，与同学交流探讨专业问题，互帮互助、共同进步，营造良好学习氛围。
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 实践经历 -->
+                <section class="card-resume card-accent-red animate-in delay-3">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-red"><i class="bi bi-kanban-fill"></i></span>
+                        <span class="section-title">实践经历</span>
+                    </div>
+                    <div class="section-divider"></div>
+
+                    <!-- 校内实训 -->
+                    <h6 style="font-weight:700; color:var(--highlight); margin-bottom:1rem; font-size:0.9rem;">
+                        <i class="bi bi-pc-display me-2"></i>校内课程实训实践
+                    </h6>
+                    <div class="project-cards mb-3">
+                        <div class="project-card">
+                            <div class="project-icon">📊</div>
+                            <div class="project-name">校园用户行为数据统计分析</div>
+                            <div class="project-role">数据采集 · 分类整理</div>
+                            <div class="project-desc">使用 Python 数据分析库进行用户行为数据统计与基础分析</div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">🧹</div>
+                            <div class="project-name">学生消费数据清洗与可视化</div>
+                            <div class="project-role">异常数据筛选 · 可视化</div>
+                            <div class="project-desc">使用 Pandas + Matplotlib 完成数据清洗与图表可视化呈现</div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">🗄️</div>
+                            <div class="project-name">数据库搭建与数据管理</div>
+                            <div class="project-role">MySQL 数据库设计</div>
+                            <div class="project-desc">独立完成数据库结构设计、数据查询优化与基础数据管理</div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">📝</div>
+                            <div class="project-name">数据分析报告撰写</div>
+                            <div class="project-role">报告编写 · 数据呈现</div>
+                            <div class="project-desc">使用 Excel + Word 完成规范的数据处理与分析报告</div>
+                        </div>
+                    </div>
+
+                    <!-- 校园实践 -->
+                    <h6 style="font-weight:700; color:var(--highlight); margin-bottom:0.8rem; font-size:0.9rem;">
+                        <i class="bi bi-people-fill me-2"></i>校园综合素质实践
+                    </h6>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="cert-item" style="flex:1; min-width:180px;">
+                            <span class="cert-icon">🏅</span>
+                            <div>
+                                <strong style="font-size:0.88rem;">学院运动会</strong>
+                                <p style="font-size:0.78rem; color:var(--text-secondary); margin:0;">锤炼协作意识与抗压能力</p>
+                            </div>
+                        </div>
+                        <div class="cert-item" style="flex:1; min-width:180px;">
+                            <span class="cert-icon">🏀</span>
+                            <div>
+                                <strong style="font-size:0.88rem;">校园篮球赛</strong>
+                                <p style="font-size:0.78rem; color:var(--text-secondary); margin:0;">团队竞技与临场应变</p>
+                            </div>
+                        </div>
+                        <div class="cert-item" style="flex:1; min-width:180px;">
+                            <span class="cert-icon">🤝</span>
+                            <div>
+                                <strong style="font-size:0.88rem;">志愿服务与班级工作</strong>
+                                <p style="font-size:0.78rem; color:var(--text-secondary); margin:0;">组织协调与执行力</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 技能证书 -->
+                <section class="card-resume card-accent-gold animate-in delay-4">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-gold"><i class="bi bi-patch-check-fill"></i></span>
+                        <span class="section-title">技能证书</span>
+                    </div>
+                    <div class="section-divider"></div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="cert-item">
+                                <span class="cert-icon">🐍</span>
+                                <div>
+                                    <strong style="font-size:0.9rem;">Python 基础编程</strong>
+                                    <p style="font-size:0.78rem; color:var(--text-secondary); margin:0;">熟练运用 Pandas、NumPy 等数据分析库</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="cert-item">
+                                <span class="cert-icon">🗃️</span>
+                                <div>
+                                    <strong style="font-size:0.9rem;">SQL 数据库操作</strong>
+                                    <p style="font-size:0.78rem; color:var(--text-secondary); margin:0;">精通 MySQL 查询优化与数据管理</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="cert-item">
+                                <span class="cert-icon">📈</span>
+                                <div>
+                                    <strong style="font-size:0.9rem;">Excel 数据处理</strong>
+                                    <p style="font-size:0.78rem; color:var(--text-secondary); margin:0;">高级函数、图表制作与数据分析</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="cert-item">
+                                <span class="cert-icon">🌐</span>
+                                <div>
+                                    <strong style="font-size:0.9rem;">计算机网络</strong>
+                                    <p style="font-size:0.78rem; color:var(--text-secondary); margin:0;">熟悉网络基础原理与架构</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 备考中 -->
+                    <div class="mt-3 p-3 rounded-3" style="background: linear-gradient(135deg, rgba(240,165,0,0.06), rgba(240,165,0,0.02)); border: 1px dashed rgba(240,165,0,0.3);">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-hourglass-split" style="color:var(--gold); font-size:1.2rem;"></i>
+                            <strong style="color:var(--text-primary); font-size:0.9rem;">正在备考：</strong>
+                            <span class="tag tag-highlight">计算机二级</span>
+                            <span class="tag tag-highlight">普通话证书</span>
+                            <span style="font-size:0.83rem; color:var(--text-secondary);">持续丰富技能储备，提升就业竞争力</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 自我评价 -->
+                <section class="card-resume card-accent-teal animate-in delay-5">
+                    <div class="d-flex align-items-center mb-0">
+                        <span class="section-icon icon-teal"><i class="bi bi-stars"></i></span>
+                        <span class="section-title">自我评价</span>
+                    </div>
+                    <div class="section-divider"></div>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="text-center p-3 rounded-3" style="background:rgba(15,52,96,0.04); height:100%;">
+                                <div style="font-size:2rem; margin-bottom:0.5rem;">🎯</div>
+                                <h6 style="font-weight:700; color:var(--accent);">专业扎实</h6>
+                                <p style="font-size:0.83rem; color:var(--text-secondary); margin:0;">
+                                    态度端正、踏实刻苦，具备扎实的大数据理论基础和实操能力，善于思考、乐于钻研
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-3 rounded-3" style="background:rgba(233,68,96,0.04); height:100%;">
+                                <div style="font-size:2rem; margin-bottom:0.5rem;">🤝</div>
+                                <h6 style="font-weight:700; color:var(--highlight);">协作担当</h6>
+                                <p style="font-size:0.83rem; color:var(--text-secondary); margin:0;">
+                                    开朗真诚、责任心强，具备良好的团队协作意识与沟通能力，执行力突出
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-3 rounded-3" style="background:rgba(0,184,148,0.04); height:100%;">
+                                <div style="font-size:2rem; margin-bottom:0.5rem;">🚀</div>
+                                <h6 style="font-weight:700; color:#00b894;">自律向上</h6>
+                                <p style="font-size:0.83rem; color:var(--text-secondary); margin:0;">
+                                    热爱运动、积极乐观，敢于挑战未知、勇于突破自我，适配行业技术更新
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 rounded-3" style="background: linear-gradient(135deg, rgba(15,52,96,0.03), transparent); border-left: 3px solid var(--accent-light);">
+                        <p style="font-size:0.88rem; color:var(--text-secondary); margin:0; line-height:1.8;">
+                            <i class="bi bi-quote" style="color:var(--accent-light); font-size:1.2rem;"></i>
+                            未来，我将继续深耕大数据专业领域，不断弥补自身短板，精进专业技能，积累更多项目实践经验，
+                            以严谨务实的态度对待学习和工作，努力成长为一名<strong style="color:var(--accent);">专业能力扎实、综合素质全面</strong>的大数据技术人才，
+                            积极把握发展机遇，实现个人价值与长远发展。
+                        </p>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- ======== 页脚 ======== -->
+        <footer class="resume-footer animate-in delay-6">
+            <strong>毕靖喜</strong>
+            <span class="divider-dot"></span>
+            数据科学与大数据技术
+            <span class="divider-dot"></span>
+            昆明学院信息工程学院
+            <span class="divider-dot"></span>
+            2023 级本科
+            <br class="d-md-none">
+            <span class="d-none d-md-inline">
+                <span class="divider-dot"></span>
+            </span>
+            <span style="opacity:0.6;">持续学习 · 勇于突破 · 追求卓越</span>
+        </footer>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- ========== 入场动画触发器 ========== -->
+    <script>
+        (function() {
+            // 当 DOM 加载完成后，为可视区域内的元素触发动画
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        // 技能条动画
+                        entry.target.querySelectorAll('.skill-fill').forEach(bar => {
+                            const targetWidth = bar.style.width;
+                            bar.style.width = '0';
+                            setTimeout(() => { bar.style.width = targetWidth; }, 200);
+                        });
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-in').forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+
+            // 初始触发已可见元素
+            setTimeout(() => {
+                document.querySelectorAll('.animate-in').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) {
+                        el.style.animationPlayState = 'running';
+                    }
+                });
+            }, 100);
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
