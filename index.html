@@ -3,63 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>毕靖喜 - 随机网址生成器</title>
+    <title>毕靖喜的个人主页</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 导航栏 */
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* 通用板块样式 */
+        section {
+            padding: 4rem 5%;
+            min-height: 60vh;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        /* 板块1：首页介绍 */
+        #home {
+            background-color: #ecf0f1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 板块2：个人介绍 */
+        #about {
+            background-color: white;
+        }
+        .about-content {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            line-height: 1.8;
+            font-size: 1.1rem;
         }
-        .container {
+
+        /* 板块3：技能/项目 */
+        #skills {
+            background-color: #ecf0f1;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .skill-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             text-align: center;
         }
-        .info {
-            color: #666;
+
+        /* 底部Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
             text-align: center;
-            margin-bottom: 30px;
-        }
-        .url-list {
-            list-style: none;
-            padding: 0;
-        }
-        .url-item {
-            padding: 10px;
-            margin: 8px 0;
-            background-color: #f0f8ff;
-            border-radius: 5px;
-            word-break: break-all;
-        }
-        .url-item a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .url-item a:hover {
-            text-decoration: underline;
+            padding: 2rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>随机网址生成器</h1>
-        <div class="info">毕靖喜 | 学号：23110941046</div>
-        
-        <h3>可访问网址列表：</h3>
-        <ul class="url-list">
-            <li class="url-item"><a href="https://www.baidu.com/s?wd=python" target="_blank">https://www.baidu.com/s?wd=python</a></li>
-            <li class="url-item"><a href="https://github.com/search?q=python" target="_blank">https://github.com/search?q=python</a></li>
-            <li class="url-item"><a href="shturl.cc/YrEgG7OrQvzvU0xH4uGTomR3aZ" target="_blank">shturl.cc/YrEgG7OrQvzvU0xH4uGTomR3aZ</a></li>
-            <li class="url-item"><a href="https://www.zhihu.com/search?q=python" target="_blank">https://www.zhihu.com/search?q=python</a></li>
-            <li class="url-item"><a href="https://www.taobao.com/list?q=python" target="_blank">https://www.taobao.com/list?q=python</a></li>
+    <!-- 1. 顶部导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能展示</a></li>
+            <li><a href="resume.html">我的简历</a></li>
         </ul>
-    </div>
+    </nav>
+
+    <!-- 2. 主体Section板块（≥3个） -->
+    <section id="home">
+        <h1>你好，我是毕靖喜 👋</h1>
+        <p>欢迎来到我的个人主页</p>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">关于我</h2>
+        <div class="about-content">
+            <p>我是一名正在学习Web开发的学生，对前端技术充满热情。这个网站是我实践HTML+CSS+GitHub Pages部署的成果。</p>
+            <p>在学习过程中，我掌握了网页基础布局、样式美化以及通过GitHub托管和发布网站的完整流程。</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">技能展示</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <p>掌握基础标签、表单、语义化布局</p>
+            </div>
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <p>基础样式、Flex/Grid布局、响应式设计</p>
+            </div>
+            <div class="skill-card">
+                <h3>Git/GitHub</h3>
+                <p>仓库托管、版本控制、Pages部署</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 页面底部Footer -->
+    <footer>
+        <p>© 2026 毕靖喜 | 学号：23110941046</p>
+    </footer>
 </body>
 </html>
